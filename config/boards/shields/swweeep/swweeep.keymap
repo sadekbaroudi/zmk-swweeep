@@ -48,15 +48,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        hs: homerow_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
         lh_pht: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
@@ -88,7 +79,7 @@
 
             bindings = <
     &kp Q          &kp W          &kp F          &kp P            &kp G                               &kp J       &kp L            &kp U          &kp Y          &kp SEMI
-    &lh_pht LCTL A &lh_pht LALT R &lh_pht LGUI S &lh_pht LSHIFT T &kp D                               &kp H       &rh_pht RSHIFT N &rh_pht RGUI E &rh_pht RALT I &rh_pht RCTL O
+    &hm LCTL A &hm LALT R &hm LGUI S &hm LSHIFT T &kp D                               &kp H       &hm RSHIFT N &hm RGUI E &hm RALT I &hm RCTL O
     &kp Z          &kp X          &kp C          &kp V            &kp B                               &kp K       &kp M            &kp COMMA      &kp DOT        &kp FSLH
                                                  &lt FUNC ESC     &lt NAV TAB  &kp SPACE    &kp BSPC  &lt SYM RET &lt MEDIA MINUS
             >;
