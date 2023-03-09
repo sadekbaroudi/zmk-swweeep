@@ -66,10 +66,10 @@
             label = "Default";
 
             bindings = <
-    &kp Q        &kp W        &kp F       &kp P         &kp B                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
-    &hm LCTL A   &hm LGUI R   &hm LALT S  &hs LSHIFT T  &kp G                                       &lt MOUSE M   &hs RSHIFT N &hm RALT E    &hm RGUI I  &hm RCTL O
-    &kp Z        &kp X        &kp C       &kp D         &kp V                                       &kp K         &kp H        &kp COMMA     &kp DOT     &kp FSLH
-                                          &kp DEL       &lt NAV RET  &lt FUNC TAB  &lt MEDIA BSPC   &lt SYM SPACE &kp SQT
+    &kp Q        &kp W        &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
+    &hm LCTL A   &hm LALT R   &hm LGUI S  &hm LSHIFT T  &kp D                                       &kp H         &hm RSHIFT N &hm RGUI E    &hm RALT I  &hm RCTL O
+    &kp Z        &kp X        &kp C       &kp V         &kp B                                       &kp K         &kp M        &kp COMMA     &kp DOT     &kp FSLH
+                                          &kp ESC       &lt NAV SPACE  &lt FUNC TAB  &lt MEDIA BSPC &lt SYM RET   &kp SQT
             >;
         };
 
@@ -77,10 +77,10 @@
             label = "Navigation";
 
             bindings = <
-    &kp ESC      &kp PG_UP    &kp UP      &kp PG_DN     &trans                                      &kp ASTRK     &kp N7       &kp N8        &kp N9      &kp MINUS
-    &kp HOME     &kp LEFT     &kp DOWN    &kp RIGHT     &kp END                                     &kp FSLH      &kp N4       &kp N5        &kp N6      &kp PLUS
-    &trans       &trans       &trans      &trans        &trans                                      &kp EQUAL     &kp N1       &kp N2        &kp N3      &kp N0
-                                          &trans        &trans       &kp TAB       &kp BSPC         &kp SPACE     &kp DOT
+    &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
+    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans               &trans        &kp LEFT         &kp DOWN          &kp UP               &kp RIGHT
+    &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LESS_THAN        &kp GREATER_THAN
+                                               &trans         &trans &trans &trans &trans &trans
             >;
         };
 
