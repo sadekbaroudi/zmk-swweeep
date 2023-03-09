@@ -48,6 +48,15 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
         lh_pht: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
@@ -78,10 +87,10 @@
             label = "Default";
 
             bindings = <
-    &kp Q          &kp W          &kp F          &kp P            &kp G                               &kp J       &kp L            &kp U          &kp Y          &kp SEMI
-    &lh_ph LCTL A &lh_ph LALT R &lh_ph LGUI S &lh_ph LSHIFT T &kp D                               &kp H       &rh_pht RSHIFT N &rh_pht RGUI E &rh_pht RALT I &rh_pht RCTL O
-    &kp Z          &kp X          &kp C          &kp V            &kp B                               &kp K       &kp M            &kp COMMA      &kp DOT        &kp FSLH
-                                                 &lt FUNC ESC     &lt NAV TAB  &kp SPACE    &kp BSPC  &lt SYM RET &lt MEDIA MINUS
+    &kp Q          &kp W          &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
+    &lh_pht LCTL A &lh_pht LALT R &lh_pht LGUI S  &lh_pht LSHIFT T  &kp D                                       &kp H         &rh_pht RSHIFT N &rh_pht RGUI E    &rh_pht RALT I  &rh_pht RCTL O
+    &kp Z          &kp X          &kp C       &kp V         &kp B                                       &kp K         &kp M        &kp COMMA     &kp DOT     &kp FSLH
+                                          &lt FUNC ESC       &lt NAV TAB  &kp SPACE  &kp BSPC  &lt SYM RET  &lt MEDIA MINUS
             >;
         };
 
@@ -89,10 +98,10 @@
             label = "Navigation";
 
             bindings = <
-    &trans           &trans       &trans       &trans         &trans                  &trans   &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
-    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans                  &kp LEFT &kp DOWN         &kp UP            &kp RIGHT            &trans
-    &trans           &trans       &trans       &trans         &trans                  &trans   &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LESS_THAN        &kp GREATER_THAN
-                                               &trans         &trans &trans    &trans &trans   &trans
+    &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
+    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans               &kp LEFT        &kp DOWN         &kp UP          &kp RIGHT               &trans
+    &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LESS_THAN        &kp GREATER_THAN
+                                               &trans         &trans &trans &trans &trans        &trans
             >;
         };
 
