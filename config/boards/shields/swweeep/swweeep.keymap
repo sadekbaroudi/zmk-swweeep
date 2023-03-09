@@ -98,10 +98,10 @@
             label = "Navigation";
 
             bindings = <
-    &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
-    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans               &kp LEFT        &kp DOWN         &kp UP          &kp RIGHT               &trans
-    &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LESS_THAN        &kp GREATER_THAN
-                                               &trans         &trans &trans &trans &trans        &trans
+    &trans           &trans       &trans       &trans         &trans                  &trans   &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
+    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans                  &kp LEFT &kp DOWN         &kp UP            &kp RIGHT            &trans
+    &kp K_UNDO       &kp K_CUT    &kp K_COPY   &kp K_PASTE    &trans                  &trans   &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LESS_THAN        &kp GREATER_THAN
+                                               &trans         &trans &trans    &trans &trans   &trans
             >;
         };
 
