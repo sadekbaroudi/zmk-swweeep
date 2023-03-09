@@ -69,7 +69,7 @@
     &kp Q        &kp W        &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
     &mt LCTL A   &mt LALT R   &hm LGUI S  &hm LSHIFT T  &kp D                                       &kp H         &hm RSHIFT N &hm RGUI E    &hm RALT I  &hm RCTL O
     &kp Z        &kp X        &kp C       &kp V         &kp B                                       &kp K         &kp M        &kp COMMA     &kp DOT     &kp FSLH
-                                          &kp ESC       &lt FUNC TAB  &lt NAV SPACE  &lt SYM RET  &lt MEDIA BSPC  &kp MINUS
+                                          &lt FUNC ESC       &lt NAV TAB  &kp SPACE  &kp BSPC  &lt SYM RET  &lt MEDIA MINUS
             >;
         };
 
@@ -78,7 +78,7 @@
 
             bindings = <
     &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
-    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans               &trans        &kp LEFT         &kp DOWN          &kp UP               &kp RIGHT
+    &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &trans               &kp LEFT        &kp DOWN         &kp UP          &kp RIGHT               &trans
     &trans           &trans       &trans       &trans         &trans               &trans        &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LESS_THAN        &kp GREATER_THAN
                                                &trans         &trans &trans &trans &trans        &trans
             >;
