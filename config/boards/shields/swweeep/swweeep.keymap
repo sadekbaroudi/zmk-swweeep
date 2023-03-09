@@ -57,25 +57,23 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        lh_pht: left_hand_positional_hold_tap {
+        lmt: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <5 6 7 8 9>;    // <---[[right-hand keys]]
+            hold-trigger-key-positions = <5 6 7 8 9>;
         };
-        rh_pht: right_hand_positional_hold_tap {
+        rmt: right_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4>;    // <---[[right-hand keys]]
+            hold-trigger-key-positions = <0 1 2 3 4>;
         };
 
     };
@@ -88,7 +86,7 @@
 
             bindings = <
     &kp Q          &kp W          &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
-    &lh_pht LCTL A &lh_pht LALT R &lh_pht LGUI S  &lh_pht LSHIFT T  &kp D                                       &kp H         &rh_pht RSHIFT N &rh_pht RGUI E    &rh_pht RALT I  &rh_pht RCTL O
+    &lmt LCTL A &lmt LALT R &lmt LGUI S  &lmt LSHIFT T  &kp D                                       &kp H         &rmt RSHIFT N &rmt RGUI E    &rmt RALT I  &rmt RCTL O
     &kp Z          &kp X          &kp C       &kp V         &kp B                                       &kp K         &kp M        &kp COMMA     &kp DOT     &kp FSLH
                                           &lt FUNC ESC       &lt NAV TAB  &kp SPACE  &kp BSPC  &lt SYM RET  &lt MEDIA MINUS
             >;
@@ -109,10 +107,10 @@
             label = "SYM";
 
             bindings = <
-    &kp TILDE &kp EXCLAMATION &kp AT_SIGN &kp HASH      &kp DOLLAR                 &trans &trans          &trans        &trans            &trans
-    &kp PIPE  &kp BACKSLASH   &kp PLUS    &kp EQUAL     &kp QUESTION               &trans &kp RIGHT_SHIFT &kp RIGHT_GUI &kp RIGHT_ALT &kp RIGHT_CONTROL
-    &kp GRAVE &kp PERCENT     &kp CARET   &kp AMPERSAND &kp ASTERISK               &trans &trans          &trans        &trans            &trans
-                                          &trans        &trans       &trans &trans &trans &trans
+    &kp TILDE &kp EXCLAMATION &kp AT_SIGN &kp HASH      &kp DOLLAR                     &trans &trans          &trans        &trans            &trans
+    &kp PIPE  &kp BACKSLASH   &kp PLUS    &kp EQUAL     &kp QUESTION                   &trans &kp RIGHT_SHIFT &kp RIGHT_GUI &kp RIGHT_ALT &kp RIGHT_CONTROL
+    &kp GRAVE &kp PERCENT     &kp CARET   &kp AMPERSAND &kp ASTERISK                   &trans &trans          &trans        &trans            &trans
+                                          &trans        &kp SQT      &kp DQT    &trans &trans &trans
             >;
         };
 
