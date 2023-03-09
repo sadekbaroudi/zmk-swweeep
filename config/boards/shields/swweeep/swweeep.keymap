@@ -84,7 +84,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "Base";
+            label = "BASE";
 
             bindings = <
     &kp Q          &kp W          &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
@@ -95,7 +95,7 @@
         };
 
         nav_layer {
-            label = "Nav";
+            label = "NAV";
 
             bindings = <
     &trans           &trans       &trans       &trans         &trans                  &trans   &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
@@ -106,7 +106,7 @@
         };
 
         sym_layer {
-            label = "Sym";
+            label = "SYM";
 
             bindings = <
     &kp TILDE &kp EXCLAMATION &kp AT_SIGN &kp HASH      &kp DOLLAR                 &trans &trans          &trans        &trans            &trans
@@ -117,7 +117,7 @@
         };
 
         func_layer {
-            label = "Num";
+            label = "NUM";
 
             bindings = <
     &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans                                         &trans       &kp NUMBER_7       &kp NUMBER_8        &kp NUMBER_9      &kp C_MUTE
@@ -128,7 +128,7 @@
         };
 
         media_layer {
-            label = "Nigger";
+            label = "NIGGER";
 
             bindings = <
     &trans       &trans       &trans        &trans            &trans                                      &trans             &bt BT_PRV        &bt BT_NXT         &trans         &trans
@@ -139,13 +139,18 @@
         };
 
         mouse_layer {
-            label = "Mouse";
+            label = "BOB";
 
             bindings = <
     &bootloader &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans
     &trans      &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans
     &trans      &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans
-                                        &trans      &trans          &trans           &trans          &trans  ";
+                                        &trans      &trans          &trans           &trans          &trans      &trans
+            >;
+        };
+
+        winnav_layer {
+            label = "MINION";
 
             bindings = <
     &trans       &trans       &kp LG(UP)   &trans        &trans                                      &trans      &trans      &trans      &trans      &trans
