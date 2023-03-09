@@ -57,6 +57,27 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        lh_pht: left_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9>;    // <---[[right-hand keys]]
+        };
+        rh_pht: right_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4>;    // <---[[right-hand keys]]
+        };
+
     };
 
     keymap {
@@ -67,7 +88,7 @@
 
             bindings = <
     &kp Q        &kp W        &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
-    &mt LCTL A   &mt LALT R   &hm LGUI S  &hm LSHIFT T  &kp D                                       &kp H         &hm RSHIFT N &hm RGUI E    &hm RALT I  &hm RCTL O
+    &lh_pht LCTL A   &lh_pht LALT R   &lh_pht LGUI S  &lh_pht LSHIFT T  &kp D                                       &kp H         &rh_pht RSHIFT N &rh_pht RGUI E    &rh_pht RALT I  &rh_pht RCTL O
     &kp Z        &kp X        &kp C       &kp V         &kp B                                       &kp K         &kp M        &kp COMMA     &kp DOT     &kp FSLH
                                           &lt FUNC ESC       &lt NAV TAB  &kp SPACE  &kp BSPC  &lt SYM RET  &lt MEDIA MINUS
             >;
@@ -100,7 +121,7 @@
 
             bindings = <
     &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans                                         &trans       &kp NUMBER_7       &kp NUMBER_8        &kp NUMBER_9      &kp C_MUTE
-    &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)                                    &trans     &kp NUMBER_4       &kp NUMBER_5        &kp NUMBER_6      &kp K_VOL_UP
+    &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)                                    &caps_word     &kp NUMBER_4       &kp NUMBER_5        &kp NUMBER_6      &kp K_VOL_UP
     &bt BT_SEL 3 &bt BT_SEL 2  &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR                                     &kp NUMBER_0     &kp NUMBER_1       &kp NUMBER_2        &kp NUMBER_3      &kp K_VOL_DN
                                             &out OUT_USB  &out OUT_BLE     &trans      &trans  &kp COMMA     &kp PERIOD
             >;
