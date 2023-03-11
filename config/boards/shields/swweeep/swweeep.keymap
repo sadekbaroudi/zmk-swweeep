@@ -75,6 +75,24 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4>;
         };
+        lst: left_hand_shift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_SHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9>;
+        };
+        rst: right_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_SHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4>;
+        };
 
     };
 
@@ -86,7 +104,7 @@
 
             bindings = <
     &kp Q          &kp W          &kp F       &kp P         &kp G                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI
-    &lmt LCTL A &lmt LALT R &lmt LGUI S  &lmt LSHIFT T  &kp D                                       &kp H         &rmt RSHIFT N &rmt RGUI E    &rmt RALT I  &rmt RCTL O
+    &lmt LCTL A &lmt LALT R &lmt LGUI S  &lst LSHIFT T  &kp D                                       &kp H         &rst RSHIFT N &rmt RGUI E    &rmt RALT I  &rmt RCTL O
     &kp Z          &kp X          &kp C       &kp V         &kp B                                       &kp K         &kp M        &kp COMMA     &kp DOT     &kp FSLH
                                           &lt FUNC ESC       &lt NAV TAB  &kp SPACE  &kp BSPC  &lt SYM RET  &lt MEDIA MINUS
             >;
