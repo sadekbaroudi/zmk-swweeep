@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_SHIFT_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9>;
@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_SHIFT_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4>;
