@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include "includes/settings.dtsi"
+#include "includes/behaviours_homerow_mods.dtsi"
+
 #define DEFAULT 0
 #define NAV     1
 #define SYM     2
